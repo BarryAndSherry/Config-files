@@ -10,17 +10,17 @@ This is a collection of config files of linux.
 2. Reboot computer
 3. Change the input frame to fctix, and open fctix configuration window add sougou pinyin method.
 
-
-
 ## Dev tools need to install
 
 Some dev tools:
 
 ```shell
-sudo apt install make
+sudo apt install make cmake
 sudo apt install build-essential
+sudo apt install git
+sudo apt install tig
+sudo apt install vim
 ```
-
 
 ## Install v2ray 
 
@@ -28,12 +28,5 @@ sudo apt install build-essential
 2. Config the proxy with socksv5 and the port is 127.0.0.1:1080
 3. systemctl enable v2ray; systemctl restart v2ray; systemctl statrus v2ray.
 
-## Install Vim
 
-Just go to vim source dir run :
 
-```shell
-make 
-
-sudo make install
-```
