@@ -41,3 +41,12 @@ sudo apt install gnome-tweak-tool
 Last step is using gnome-tweak-tool to chose the font
 
 
+## Config python env
+
+Install virtualenv:
+```shell
+sudo apt install virtualenv
+```
+
+
+
