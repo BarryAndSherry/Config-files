@@ -4,13 +4,21 @@ This is a collection of config files of linux.
 
 # Config process from scrach
 
+## Install input method for chinese
 
-## Software and tool need to install
+1. Go to sougo offical site to download the setup packages, install it.
+2. Reboot computer
+3. Change the input frame to fctix, and open fctix configuration window add sougou pinyin method.
+
+
+
+## Dev tools need to install
 
 Some dev tools:
 
 ```shell
 sudo apt install make
+sudo apt install build-essential
 ```
 
 
