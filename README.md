@@ -27,6 +27,11 @@ sudo apt install git
 sudo apt install tig
 sudo apt install vim
 sudo apt install vim-gnome
+sudo apt install rename
+```
+Some common softwares
+```shell
+sudo apt install vlc
 ```
 
 ## Install nerd font:
@@ -47,6 +52,3 @@ Install virtualenv:
 ```shell
 sudo apt install virtualenv
 ```
-
-
-
