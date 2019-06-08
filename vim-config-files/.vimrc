@@ -401,9 +401,10 @@ noremap XX "+x<CR>
 "" Buffer nav
 noremap <left>  :bp<CR>
 noremap <right> :bp<CR>
+nnoremap <leader>q :bd<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
+noremap <leader>c :Commentary<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <backspace> :noh<cr>
@@ -428,9 +429,6 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "" up and down as real line when wraped
 nnoremap j gj
 nnoremap k gk
-
-"" To close buffer
-nnoremap <leader>q :bd<CR>
 
 "*****************************************************************************
 "" Custom configs

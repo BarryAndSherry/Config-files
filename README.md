@@ -28,6 +28,8 @@ sudo apt install tig
 sudo apt install vim
 sudo apt install vim-gnome
 sudo apt install rename
+sudo apt install tmux
+sudo apt install xclip
 ```
 Some common softwares
 ```shell
@@ -52,3 +54,6 @@ Install virtualenv:
 ```shell
 sudo apt install virtualenv
 ```
+
+
+
