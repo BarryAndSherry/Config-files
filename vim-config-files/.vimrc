@@ -34,7 +34,6 @@ call plug#begin(expand('~/.vim/plugged'))
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -45,7 +44,6 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -67,9 +65,16 @@ Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+
+" for c/cpp programming
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+Plug 'ludwig/split-manpage.vim'
+
 "" Color
 Plug 'tomasr/molokai'
 
+
+"" Things for beautiful icons
 Plug 'ryanoasis/vim-devicons' 
 
 "" Interative shell
@@ -80,18 +85,14 @@ Plug 'jszakmeister/markdown2ctags'
  " Add support for markdown files in tagbar. 
  let g:tagbar_type_markdown = { 'ctagstype': 'markdown', 'ctagsbin' : '~/.vim/plugged/markdown2ctags/markdown2ctags.py', 'ctagsargs' : '-f - --sort=yes --sro=»', 'kinds' : [ 's:sections', 'i:images' ], 'sro' : '»', 'kind2scope' : { 's' : 'section', }, 'sort': 0, }
 
-"*****************************************************************************
-"" Custom bundles
-"*****************************************************************************
+ "" Over vim make you could priview when doing replace 
+Plug 'osyo-manga/vim-over'
 
-" c
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
+"" swiper make you find things easily
+Plug 'pelodelfuego/vim-swoop'
 
 
 "*****************************************************************************
-"*****************************************************************************
-
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
@@ -188,11 +189,9 @@ else
   
 endif
 
-
 if &term =~ '256color'
   set t_ut=
 endif
-
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -318,16 +317,6 @@ set autoread
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
-
-"" Git
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
