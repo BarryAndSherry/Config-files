@@ -63,11 +63,12 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
+        echo "(${BRANCH}${STAT})"
 	else
 		echo ""
 	fi
 }
+
 
 # get current status of git repo
 function parse_git_dirty 
@@ -84,19 +85,19 @@ function parse_git_dirty
 		bits=">${bits}"
 	fi
 	if [ "${ahead}" == "0" ]; then
-		bits="*${bits}"
+		bits=" ${bits}"
 	fi
 	if [ "${newfile}" == "0" ]; then
-		bits="+${bits}"
+		bits=" ${bits}"
 	fi
 	if [ "${untracked}" == "0" ]; then
-		bits="?${bits}"
+		bits=" ${bits}"
 	fi
 	if [ "${deleted}" == "0" ]; then
-		bits="x${bits}"
+		bits="﫧${bits}"
 	fi
 	if [ "${dirty}" == "0" ]; then
-		bits="!${bits}"
+		bits=" ${bits}"
 	fi
 	if [ ! "${bits}" == "" ]; then
 		echo " ${bits}"
@@ -107,10 +108,12 @@ function parse_git_dirty
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]> \[\033[00m\]\[\033[01;34m\]\W\[\033[00m\] $(parse_git_branch)\[\e[31m\]\\$\[\e[m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\] \[\033[00m\]\[\033[01;34m\]\W\[\033[00m\] $(parse_git_branch)\[\e[31m\]\\$\[\e[m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
+
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
