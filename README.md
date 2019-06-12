@@ -29,6 +29,7 @@ sudo apt install vim-gnome
 sudo apt install rename
 sudo apt install tmux
 sudo apt install xclip
+sudo apt install meld
 ```
 Some common softwares
 ```shell
