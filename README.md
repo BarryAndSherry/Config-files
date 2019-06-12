@@ -3,7 +3,6 @@
 This is a collection of config files of linux.
 
 # Config process from scrach
-
 ## Install v2ray 
 
 1. Run go.sh in vary dir, make sure the setup file path is correct.
@@ -37,6 +36,7 @@ sudo apt install vlc
 ```
 
 ## Install nerd font:
+Install font basically is download the font file(ttf or otf), and place it in a spec dir, then update the font cache:
 ```shell
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
@@ -46,7 +46,6 @@ fc-list | grep -i droid
 sudo apt install gnome-tweak-tool
 ```
 Last step is using gnome-tweak-tool to chose the font
-
 
 ## Config python env
 
