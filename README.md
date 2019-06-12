@@ -54,5 +54,3 @@ Install virtualenv:
 sudo apt install virtualenv
 ```
 
-
-

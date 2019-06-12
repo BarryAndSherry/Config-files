@@ -157,7 +157,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-silent! colorscheme molokai
+"silent! colorscheme molokai
 
 set mousemodel=popup
 set t_Co=256
@@ -220,7 +220,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'kalisi'
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
@@ -474,11 +474,11 @@ if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#readonly#symbol   = '⊘'
   let g:airline#extensions#linecolumn#prefix = '¶'
   let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = '␊'
-  let g:airline_symbols.branch    = '⎇'
-  let g:airline_symbols.paste     = 'ρ'
-  let g:airline_symbols.paste     = 'Þ'
-  let g:airline_symbols.paste     = '∥'
+  " let g:airline_symbols.linenr    = '␊'
+  let g:airline_symbols.branch    = ''
+  " let g:airline_symbols.paste     = 'ρ'
+  " let g:airline_symbols.paste     = 'Þ'
+  " let g:airline_symbols.paste     = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
 else
   let g:airline#extensions#tabline#left_sep = ''
