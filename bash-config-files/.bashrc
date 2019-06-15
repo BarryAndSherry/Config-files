@@ -174,3 +174,9 @@ if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc
 else
     eval $(dircolors)
 fi
+
+# Some alias for command using
+alias bc="vim ~/.bashrc"
+alias so="source ~/.bashrc; echo 'reloaded:)'"
+alias emacs="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -q"
+

@@ -43,7 +43,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -73,7 +72,6 @@ Plug 'ludwig/split-manpage.vim'
 "" Color
 Plug 'tomasr/molokai'
 
-
 "" Things for beautiful icons
 Plug 'ryanoasis/vim-devicons' 
 
@@ -85,14 +83,13 @@ Plug 'jszakmeister/markdown2ctags'
  " Add support for markdown files in tagbar. 
  let g:tagbar_type_markdown = { 'ctagstype': 'markdown', 'ctagsbin' : '~/.vim/plugged/markdown2ctags/markdown2ctags.py', 'ctagsargs' : '-f - --sort=yes --sro=»', 'kinds' : [ 's:sections', 'i:images' ], 'sro' : '»', 'kind2scope' : { 's' : 'section', }, 'sort': 0, }
 
- "" Over vim make you could priview when doing replace 
+"" Over vim make you could priview when doing replace 
 Plug 'osyo-manga/vim-over'
 
 "" swiper make you find things easily
 Plug 'pelodelfuego/vim-swoop'
 
-
-"*****************************************************************************
+"***************************************************************************
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
