@@ -460,7 +460,7 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-if !exists('g:airline_powerline_fonts')
+if exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = '|'
   let g:airline_left_sep          = ' '
@@ -480,7 +480,6 @@ if !exists('g:airline_powerline_fonts')
 else
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
-
   " powerline symbols
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
