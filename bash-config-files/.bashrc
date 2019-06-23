@@ -127,7 +127,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -168,15 +168,27 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 # Set LS_COLORS environment by Deepin
-if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
-    eval $(dircolors -b /etc/lscolor-256color)
-else
-    eval $(dircolors)
-fi
+# if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
+#     eval $(dircolors -b /etc/lscolor-256color)
+# else
+#     eval $(dircolors)
+# fi
 
 # Some alias for command using
 alias bc="vim ~/.bashrc"
 alias so="source ~/.bashrc; echo 'reloaded:)'"
-alias emacs="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -q"
+alias emacs="LC_CTYPE='zh_CN.UTF-8' emacs"
+alias ff="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -n"
+alias fn="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -nw"
+alias resv="sudo systemctl restart v2ray"
+alias findemacsd="ps -e | grep emacs"
+alias vcon="sudo vim /etc/v2ray/config.json"
+alias getd="sudo mount /dev/sdb3 ~/external/"
+alias open="xdg-open"
+alias rename="perl-rename"
+alias pydir="cd ~/external/workspace/python/"
+alias i3c="evim ~/.config/i3/config"
+alias i3sc="evim ~/.config/i3status/config"
 
