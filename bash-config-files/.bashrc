@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -141,8 +141,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -lA'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -168,6 +168,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export EDITOR="vim"
 
 # Set LS_COLORS environment by Deepin
 # if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
@@ -180,15 +181,24 @@ fi
 alias bc="vim ~/.bashrc"
 alias so="source ~/.bashrc; echo 'reloaded:)'"
 alias emacs="LC_CTYPE='zh_CN.UTF-8' emacs"
-alias ff="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -n"
-alias fn="LC_CTYPE='zh_CN.UTF-8' emacsclient -c -a= -nw"
+alias es="~/Config-files/scripts/es.sh"
+alias ff="LC_CTYPE='zh_CN.UTF-8' ~/Config-files/scripts/ec.sh"
+alias fn="LC_CTYPE='zh_CN.UTF-8' ~/Config-files/scripts/et.sh"
+alias fs="sudo LC_CTYPE='zh_CN.UTF-8' ~/Config-files/scripts/et.sh"
 alias resv="sudo systemctl restart v2ray"
 alias findemacsd="ps -e | grep emacs"
 alias vcon="sudo vim /etc/v2ray/config.json"
 alias getd="sudo mount /dev/sdb3 ~/external/"
+alias getf="sudo mount /dev/sdb6 ~/f-disk/"
 alias open="xdg-open"
 alias rename="perl-rename"
 alias pydir="cd ~/external/workspace/python/"
 alias i3c="evim ~/.config/i3/config"
 alias i3sc="evim ~/.config/i3status/config"
-
+alias go="~/Config-files/scripts/go.sh"
+alias his="~/Config-files/scripts/his.sh"
+alias jk="~/Config-files/scripts/jk.sh"
+alias rm="rm -i"
+alias update-fonts="sudo fc-cache -fv"
+alias ii="nautilus ./ & >> /dev/null"
+alias sii="sudo nautilus ./ & >> /dev/null"
