@@ -33,7 +33,7 @@ change_focus() {
   emacsclient -n -e "(select-frame-set-input-focus (selected-frame))" > /dev/null
 }                                                                                
                                                                                
-# try switching to the frame incase it is just minimized                         
+# try switching to the frame increase it is just minimized
 # will start a server if not running
 test "$(visible_frames)" -eq "1" && change_focus
                                                                                
@@ -43,6 +43,6 @@ if [ "$(visible_frames)" -lt  "2" ]; then # need to create a frame
 else # there is already a visible frame besides the daemon, so                   
   change_focus                                                                   
   # -n $@ errors if there are no args                                            
-  test  "$#" -ne "0" && emacsclient -n "$@"                                      
+  test  "$#" -ne "0" && emacsclient -n "$@"
 fi                                                                               
 
