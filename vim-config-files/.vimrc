@@ -31,6 +31,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+"Plugins for gneral use
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
@@ -42,10 +43,15 @@ Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
+Plug 'easymotion/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+
 
 " for c/cpp programming
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
+Plug 'ycm-core/YouCompleteMe'
+
 
 "" Color
 Plug 'tomasr/molokai'
@@ -297,6 +303,9 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
+
+" key map for easy motion
+nmap s <Plug>(easymotion-s)
 
 
 " Tagbar
