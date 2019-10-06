@@ -209,4 +209,5 @@ alias lsn="bash ~/external/notes/do.sh"
 alias config-dir="cd ~/Config-files/"
 alias :q="exit"
 alias share_win="sudo mount -t cifs -o username=Administrator //192.168.2.150/install-packages/ /mnt/share/"
+alias :c="guake --hide"
 

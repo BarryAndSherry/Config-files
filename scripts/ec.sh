@@ -39,7 +39,7 @@ test "$(visible_frames)" -eq "1" && change_focus
                                                                                
 if [ "$(visible_frames)" -lt  "2" ]; then # need to create a frame               
   # -c $@ with no args just opens the scratch buffer                             
-  emacsclient -n -c "$@" && change_focus
+  emacsclient  -n -F "((fullscreen . maximized))" -c "$@" && change_focus
 else # there is already a visible frame besides the daemon, so                   
   change_focus                                                                   
   # -n $@ errors if there are no args                                            
