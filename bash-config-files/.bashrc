@@ -177,6 +177,9 @@ export EDITOR="vim"
 #     eval $(dircolors)
 # fi
 
+# using z command to jump around
+source ~/Config-files/bash-config-files/z.sh
+
 # Some alias for command using
 alias bc="vim ~/.bashrc"
 alias so="source ~/.bashrc; echo 'Bash config reloaded:)'"
@@ -210,4 +213,5 @@ alias config-dir="cd ~/Config-files/"
 alias :q="exit"
 alias share_win="sudo mount -t cifs -o username=Administrator //192.168.2.150/install-packages/ /mnt/share/"
 alias :c="guake --hide"
-
+alias openpdf="~/Config-files/scripts/openpdf.sh"
+alias ii="nautilus ./ 2> /dev/null &"
