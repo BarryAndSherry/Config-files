@@ -215,3 +215,5 @@ alias share_win="sudo mount -t cifs -o username=Administrator //192.168.2.150/in
 alias :c="guake --hide"
 alias openpdf="~/Config-files/scripts/openpdf.sh"
 alias ii="nautilus ./ 2> /dev/null &"
+alias pwdc=" pwd | xclip -selection clipboard"
+
